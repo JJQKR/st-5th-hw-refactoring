@@ -1,3 +1,10 @@
+//1. context 브랜치에서,
+// useState, useEffect로 관리하던 것을 context api로 리팩터링합니다.
+//(useContext)
+
+//2. redux 브랜치에서 context api 로 리팩터링된 것을 redux 로 리팩터링합니다.
+//~~~~~~~~~~~~~~~~~~`
+
 import React, { useState, useEffect } from "react";
 import TextInput from "./components/TextInput";
 import TextList from "./components/TextList";
@@ -7,7 +14,7 @@ function App() {
   const [texts, setTexts] = useState(() =>
     localStorage.getItem("texts")
       ? JSON.parse(localStorage.getItem("texts"))
-      : [],
+      : []
   );
 
   useEffect(() => {
